@@ -15,6 +15,11 @@ var bodyParser=require("body-parser");
 // const e = require("express");
 // const { userInfo } = require("os");
 var app=express();
+const cors = require('cors');
+app.use(
+    cors({
+        origin:"*",
+}));
 // app.set("view engine","ejs");
 app.use(express.static(__dirname+"/build"));
 // require("dotenv").config();
